@@ -12,16 +12,16 @@ export default function HumanRightsSeminarContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <p className="text-lg mb-4">
-              The AASTU UN Association Human Rights Seminar is a flagship initiative that brings together 
-              students, academics, activists, and policymakers to discuss pressing human rights issues 
-              both locally and globally. Through educational sessions, workshops, and advocacy campaigns, 
-              we aim to foster a deeper understanding of human rights principles and challenges.
+              The AASTU UN Association Human Rights Seminar is a flagship initiative that brings together students,
+              academics, activists, and policymakers to discuss pressing human rights issues both locally and globally.
+              Through educational sessions, workshops, and advocacy campaigns, we aim to foster a deeper understanding
+              of human rights principles and challenges.
             </p>
             <p className="text-lg mb-4">
-              Our seminar series aligns with the Universal Declaration of Human Rights and the UN Sustainable 
-              Development Goals, particularly SDG 10 (Reduced Inequalities) and SDG 16 (Peace, Justice and 
-              Strong Institutions). We believe that education and dialogue are powerful tools for promoting 
-              human rights awareness and action.
+              Our seminar series aligns with the Universal Declaration of Human Rights and the UN Sustainable
+              Development Goals, particularly SDG 10 (Reduced Inequalities) and SDG 16 (Peace, Justice and Strong
+              Institutions). We believe that education and dialogue are powerful tools for promoting human rights
+              awareness and action.
             </p>
           </div>
           <div className="bg-purple-50 p-6 rounded-lg">
@@ -65,9 +65,8 @@ export default function HumanRightsSeminarContent() {
             </CardHeader>
             <CardContent>
               <p className="mb-4">
-                This seminar will examine how artificial intelligence and digital technologies 
-                are reshaping our understanding of human rights, with a focus on privacy, 
-                surveillance, and freedom of expression.
+                This seminar will examine how artificial intelligence and digital technologies are reshaping our
+                understanding of human rights, with a focus on privacy, surveillance, and freedom of expression.
               </p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center">
@@ -92,9 +91,8 @@ export default function HumanRightsSeminarContent() {
             </CardHeader>
             <CardContent>
               <p className="mb-4">
-                Join us for a comprehensive discussion on the current state of women's rights 
-                globally, with a special focus on education, economic empowerment, and 
-                political participation.
+                Join us for a comprehensive discussion on the current state of women's rights globally, with a special
+                focus on education, economic empowerment, and political participation.
               </p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center">
@@ -119,9 +117,8 @@ export default function HumanRightsSeminarContent() {
             </CardHeader>
             <CardContent>
               <p className="mb-4">
-                This seminar will explore the legal frameworks protecting refugee rights, 
-                current challenges in Ethiopia and the Horn of Africa, and opportunities 
-                for student engagement and advocacy.
+                This seminar will explore the legal frameworks protecting refugee rights, current challenges in Ethiopia
+                and the Horn of Africa, and opportunities for student engagement and advocacy.
               </p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center">
@@ -158,8 +155,8 @@ export default function HumanRightsSeminarContent() {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">
-                    This seminar explored the intersection of indigenous rights and environmental 
-                    protection, featuring speakers from indigenous communities and environmental organizations.
+                    This seminar explored the intersection of indigenous rights and environmental protection, featuring
+                    speakers from indigenous communities and environmental organizations.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-between">
@@ -167,7 +164,7 @@ export default function HumanRightsSeminarContent() {
                   <Button variant="outline">Download Materials</Button>
                 </CardFooter>
               </Card>
-              
+
               <Card>
                 <CardHeader>
                   <CardTitle>Right to Education in Post-Conflict Regions</CardTitle>
@@ -175,8 +172,8 @@ export default function HumanRightsSeminarContent() {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">
-                    A comprehensive discussion on educational challenges in post-conflict areas, 
-                    with case studies from Ethiopia and neighboring countries.
+                    A comprehensive discussion on educational challenges in post-conflict areas, with case studies from
+                    Ethiopia and neighboring countries.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-between">
@@ -195,8 +192,8 @@ export default function HumanRightsSeminarContent() {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">
-                    An examination of the balance between security and privacy in the digital age, 
-                    with a focus on legal frameworks and individual rights.
+                    An examination of the balance between security and privacy in the digital age, with a focus on legal
+                    frameworks and individual rights.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-between">
@@ -204,7 +201,7 @@ export default function HumanRightsSeminarContent() {
                   <Button variant="outline">Download Materials</Button>
                 </CardFooter>
               </Card>
-              
+
               <Card>
                 <CardHeader>
                   <CardTitle>Children's Rights and Protection</CardTitle>
@@ -212,8 +209,8 @@ export default function HumanRightsSeminarContent() {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">
-                    This seminar addressed the challenges of protecting children's rights, 
-                    with a special focus on education, health, and protection from exploitation.
+                    This seminar addressed the challenges of protecting children's rights, with a special focus on
+                    education, health, and protection from exploitation.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-between">
@@ -232,8 +229,8 @@ export default function HumanRightsSeminarContent() {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">
-                    An analysis of how the COVID-19 pandemic affected human rights globally, 
-                    with lessons for future public health emergencies.
+                    An analysis of how the COVID-19 pandemic affected human rights globally, with lessons for future
+                    public health emergencies.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-between">
@@ -241,7 +238,7 @@ export default function HumanRightsSeminarContent() {
                   <Button variant="outline">Download Materials</Button>
                 </CardFooter>
               </Card>
-              
+
               <Card>
                 <CardHeader>
                   <CardTitle>Freedom of Expression and Media Rights</CardTitle>
@@ -249,8 +246,8 @@ export default function HumanRightsSeminarContent() {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">
-                    This seminar explored the challenges facing journalists and media organizations, 
-                    with a focus on legal protections and digital safety.
+                    This seminar explored the challenges facing journalists and media organizations, with a focus on
+                    legal protections and digital safety.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-between">
@@ -267,8 +264,8 @@ export default function HumanRightsSeminarContent() {
         <h2 className="text-3xl font-bold mb-6">Get Involved</h2>
         <div className="bg-slate-50 p-8 rounded-lg">
           <p className="text-lg mb-6">
-            There are many ways to participate in our Human Rights Seminar series, whether you're 
-            interested in attending events, volunteering, or contributing to research and advocacy.
+            There are many ways to participate in our Human Rights Seminar series, whether you're interested in
+            attending events, volunteering, or contributing to research and advocacy.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card>
@@ -277,34 +274,34 @@ export default function HumanRightsSeminarContent() {
               </CardHeader>
               <CardContent>
                 <p className="mb-4">
-                  Our seminars are open to all AASTU students and faculty. Registration is required 
-                  for most events to ensure adequate seating and materials.
+                  Our seminars are open to all AASTU students and faculty. Registration is required for most events to
+                  ensure adequate seating and materials.
                 </p>
                 <Button className="w-full bg-purple-600 hover:bg-purple-700">View Calendar</Button>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardHeader>
                 <CardTitle>Join the Research Team</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="mb-4">
-                  Help research human rights issues, prepare briefing papers, and develop 
-                  educational materials for our seminars and advocacy campaigns.
+                  Help research human rights issues, prepare briefing papers, and develop educational materials for our
+                  seminars and advocacy campaigns.
                 </p>
                 <Button className="w-full bg-purple-600 hover:bg-purple-700">Apply Now</Button>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardHeader>
                 <CardTitle>Become a Facilitator</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="mb-4">
-                  Develop your leadership skills by facilitating discussions, workshops, 
-                  and activities during our human rights seminars.
+                  Develop your leadership skills by facilitating discussions, workshops, and activities during our human
+                  rights seminars.
                 </p>
                 <Button className="w-full bg-purple-600 hover:bg-purple-700">Learn More</Button>
               </CardContent>
@@ -316,17 +313,14 @@ export default function HumanRightsSeminarContent() {
       <section>
         <h2 className="text-3xl font-bold mb-6">Contact the Human Rights Seminar Team</h2>
         <Card>
-          <CardContent className="pt-6">\
-
-\
-
-\
-
-\
-
-\
-
-\
-
-\
+          <CardContent className="pt-6">
+            {/* Contact form content would go here */}
+            <p>For more information about our Human Rights Seminar series, please contact us at:</p>
+            <p className="font-semibold mt-2">humanrights@aastu-una.org</p>
+          </CardContent>
+        </Card>
+      </section>
+    </div>
+  )
+}
 
