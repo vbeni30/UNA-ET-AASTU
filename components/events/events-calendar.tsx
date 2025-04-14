@@ -172,4 +172,3 @@ export function EventsCalendar() {
     </section>
   )
 }
-

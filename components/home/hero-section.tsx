@@ -151,4 +151,3 @@ export function HeroSection() {
     </section>
   )
 }
-

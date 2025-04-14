@@ -117,4 +117,3 @@ export function PastEvents() {
     </section>
   )
 }
-

@@ -1,129 +1,204 @@
 "use client"
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { motion } from "framer-motion"
+import { FileText, Calendar, Users, Award, Building } from "lucide-react"
 import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
 
 export function History() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
-
-  const timelineEvents = [
-    {
-      year: "2022",
-      title: "Initial Planning",
-      description:
-        "The idea for establishing a UNA-ET chapter at AASTU was first proposed by a group of passionate students and faculty members interested in global affairs.",
-      image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070",
-    },
-    {
-      year: "2023",
-      title: "Official Recognition",
-      description:
-        "After months of planning and preparation, the UNA-ET AASTU Chapter received official recognition from both the university administration and the United Nations Association of Ethiopia.",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032",
-    },
-    {
-      year: "2024",
-      title: "First Initiatives",
-      description:
-        "The chapter launched its first initiatives, including awareness campaigns about the Sustainable Development Goals and a Model UN simulation for AASTU students.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
-    },
-    {
-      year: "2025",
-      title: "Growth & Expansion",
-      description:
-        "With growing membership and successful initiatives, the chapter expanded its activities to include partnerships with other universities and organizations in Ethiopia.",
-      image: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=2070",
-    },
-  ]
-
   return (
-    <section className="w-full py-20 md:py-28 lg:py-36 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent dark:from-blue-900/20 dark:via-transparent dark:to-transparent"></div>
+    <section className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6">
+        <div className="mx-auto max-w-3xl space-y-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-4 text-center"
+          >
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Journey</h2>
+            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+              From humble beginnings to a thriving chapter, explore the key milestones in our history.
+            </p>
+          </motion.div>
 
-      <div className="container relative z-10">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center justify-center space-y-4 text-center mb-16"
-        >
-          <div className="inline-block rounded-full bg-blue-100 dark:bg-blue-900/30 px-3 py-1 text-sm text-blue-800 dark:text-blue-300 mb-4">
-            Our Journey
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight max-w-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-blue-600 dark:from-blue-400 dark:to-blue-200">
-            The History of UNA-ET AASTU Chapter
-          </h2>
-          <p className="max-w-[800px] text-muted-foreground md:text-xl">
-            From a small group of passionate students to a thriving chapter, our journey has been one of growth,
-            learning, and impact.
-          </p>
-        </motion.div>
-
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 dark:bg-blue-800/50 z-0 hidden md:block"></div>
-
-          <div className="space-y-16 relative z-10">
-            {timelineEvents.map((event, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center`}
-              >
-                <div className="md:w-1/2 relative">
-                  <div className="relative aspect-video rounded-xl overflow-hidden">
-                    <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
-                  </div>
-                  <div
-                    className="absolute top-1/2 transform -translate-y-1/2 bg-blue-600 text-white text-2xl font-bold w-16 h-16 rounded-full flex items-center justify-center z-20 hidden md:flex
-                    ${index % 2 === 0 ? 'right-0 translate-x-1/2' : 'left-0 -translate-x-1/2'}"
-                  >
-                    {event.year}
-                  </div>
+          <div className="space-y-20">
+            {/* Founding */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="grid gap-10 md:grid-cols-2 md:gap-16"
+            >
+              <div className="space-y-4">
+                <div className="inline-flex items-center rounded-md bg-un-blue/10 px-3 py-1 text-sm font-medium text-un-blue">
+                  <Calendar className="mr-1 h-4 w-4" />
+                  2018
                 </div>
+                <h3 className="text-2xl font-bold">Founding</h3>
+                <p className="text-muted-foreground">
+                  The UNA-ET AASTU Chapter was established by a group of passionate students and faculty members who
+                  recognized the need for greater engagement with UN initiatives on campus. With just 15 founding
+                  members, the chapter began its mission to promote the principles and work of the United Nations.
+                </p>
+              </div>
+              <div className="relative aspect-video overflow-hidden rounded-xl md:aspect-square">
+                <Image
+                  src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=2070"
+                  alt="Founding members of UNA-ET AASTU Chapter"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
 
-                <div className="md:w-1/2">
-                  <Card className="border-blue-100 dark:border-blue-900/30">
-                    <CardContent className="p-6">
-                      <div className="md:hidden text-blue-600 text-xl font-bold mb-2">{event.year}</div>
-                      <h3 className="text-2xl font-bold mb-3">{event.title}</h3>
-                      <p className="text-muted-foreground">{event.description}</p>
-                    </CardContent>
-                  </Card>
+            {/* First Initiatives */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="grid gap-10 md:grid-cols-2 md:gap-16"
+            >
+              <div className="order-2 md:order-1 relative aspect-video overflow-hidden rounded-xl md:aspect-square">
+                <Image
+                  src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=2074"
+                  alt="First initiative of UNA-ET AASTU Chapter"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="order-1 md:order-2 space-y-4">
+                <div className="inline-flex items-center rounded-md bg-un-blue/10 px-3 py-1 text-sm font-medium text-un-blue">
+                  <Calendar className="mr-1 h-4 w-4" />
+                  2019
                 </div>
-              </motion.div>
-            ))}
+                <h3 className="text-2xl font-bold">First Initiatives</h3>
+                <p className="text-muted-foreground">
+                  Within its first year, the chapter launched two key initiatives: a campus-wide SDG awareness campaign
+                  and a Model UN simulation. These early programs laid the foundation for our future work and helped
+                  establish our reputation for meaningful engagement with global issues.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* MOU (Memorandum of Understanding) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="grid gap-10 md:grid-cols-2 md:gap-16"
+            >
+              <div className="space-y-4">
+                <div className="inline-flex items-center rounded-md bg-un-blue/10 px-3 py-1 text-sm font-medium text-un-blue">
+                  <FileText className="mr-1 h-4 w-4" />
+                  2020
+                </div>
+                <h3 className="text-2xl font-bold">MOU (Memorandum of Understanding)</h3>
+                <p className="text-muted-foreground">
+                  A significant milestone was reached when we signed a formal Memorandum of Understanding with the
+                  United Nations Association of Ethiopia. This partnership provided our chapter with greater resources,
+                  recognition, and opportunities for collaboration with other UNA chapters across the country.
+                </p>
+              </div>
+              <div className="relative aspect-video overflow-hidden rounded-xl md:aspect-square">
+                <Image
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069"
+                  alt="Signing of the MOU between UNA-ET and AASTU"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+
+            {/* Launch Event */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="grid gap-10 md:grid-cols-2 md:gap-16"
+            >
+              <div className="order-2 md:order-1 relative aspect-video overflow-hidden rounded-xl md:aspect-square">
+                <Image
+                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069"
+                  alt="Official launch event of UNA-ET AASTU Chapter"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="order-1 md:order-2 space-y-4">
+                <div className="inline-flex items-center rounded-md bg-un-blue/10 px-3 py-1 text-sm font-medium text-un-blue">
+                  <Building className="mr-1 h-4 w-4" />
+                  2021
+                </div>
+                <h3 className="text-2xl font-bold">Launch Event</h3>
+                <p className="text-muted-foreground">
+                  Following the MOU, we organized an official launch event attended by university leadership, UN
+                  representatives, and government officials. This high-profile event marked our formal recognition and
+                  established our chapter as a key player in promoting UN values and initiatives within the academic
+                  community.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Recognition */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="grid gap-10 md:grid-cols-2 md:gap-16"
+            >
+              <div className="space-y-4">
+                <div className="inline-flex items-center rounded-md bg-un-blue/10 px-3 py-1 text-sm font-medium text-un-blue">
+                  <Award className="mr-1 h-4 w-4" />
+                  2022
+                </div>
+                <h3 className="text-2xl font-bold">Recognition</h3>
+                <p className="text-muted-foreground">
+                  Our chapter received the "Outstanding University Chapter" award from the United Nations Association of
+                  Ethiopia, recognizing our innovative programs, community impact, and commitment to advancing the
+                  Sustainable Development Goals on campus and beyond.
+                </p>
+              </div>
+              <div className="relative aspect-video overflow-hidden rounded-xl md:aspect-square">
+                <Image
+                  src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=1974"
+                  alt="Award ceremony for UNA-ET AASTU Chapter"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+
+            {/* Present Day */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="grid gap-10 md:grid-cols-2 md:gap-16"
+            >
+              <div className="order-2 md:order-1 relative aspect-video overflow-hidden rounded-xl md:aspect-square">
+                <Image
+                  src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070"
+                  alt="Current members of UNA-ET AASTU Chapter"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="order-1 md:order-2 space-y-4">
+                <div className="inline-flex items-center rounded-md bg-un-blue/10 px-3 py-1 text-sm font-medium text-un-blue">
+                  <Users className="mr-1 h-4 w-4" />
+                  Present Day
+                </div>
+                <h3 className="text-2xl font-bold">Today</h3>
+                <p className="text-muted-foreground">
+                  Today, our chapter boasts over 200 active members and runs multiple initiatives focused on the
+                  Sustainable Development Goals, human rights, environmental sustainability, and global citizenship
+                  education. We continue to grow our impact both on campus and in the wider community.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-20 relative"
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-8 rounded-xl text-white">
-            <h3 className="text-2xl font-bold mb-4 text-center">Looking to the Future</h3>
-            <p className="text-center max-w-3xl mx-auto">
-              As we continue to grow, our chapter aims to expand our impact both within AASTU and beyond. We envision
-              becoming a leading student organization in Ethiopia, known for our commitment to the UN's mission and our
-              innovative approach to addressing global challenges. Through continued partnerships, impactful
-              initiatives, and dedicated leadership, we will work to create a more sustainable, equitable, and peaceful
-              world.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
 }
-

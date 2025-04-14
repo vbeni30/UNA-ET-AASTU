@@ -13,4 +13,3 @@ export default function RegisterEventsPage() {
     </div>
   )
 }
-

@@ -60,9 +60,11 @@
     "zod": "^3.24.1",
     "@emotion/is-prop-valid": "latest",
     "framer-motion": "latest",
-    "react-countup": "latest",
     "lodash.debounce": "latest",
-    "uuid": "latest"
+    "uuid": "latest",
+    "react-countup": "latest",
+    "react-hook-inview": "latest",
+    "react-intersection-observer": "latest"
   },
   "devDependencies": {
     "@types/node": "^22",

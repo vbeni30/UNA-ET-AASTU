@@ -34,4 +34,3 @@ export function MembershipHero({ title, subtitle, image }: MembershipHeroProps) 
     </section>
   )
 }
-

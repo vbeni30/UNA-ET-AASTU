@@ -12,4 +12,3 @@ export interface EventRegistration {
   specialRequirements: string
   registeredAt: string
 }
-

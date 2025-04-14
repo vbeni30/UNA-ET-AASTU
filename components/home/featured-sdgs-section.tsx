@@ -195,4 +195,3 @@ export function FeaturedSDGsSection() {
     </section>
   )
 }
-

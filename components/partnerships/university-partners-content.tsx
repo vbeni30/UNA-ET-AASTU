@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Building2, GraduationCap, Globe, BookOpen, Users } from "lucide-react"
 
 export function UniversityPartnersContent() {
-  // Sample university partners data
+  // Updated university partners data - removed Environmental Engineering Department
   const universityPartners = [
     {
       name: "Addis Ababa University",
@@ -18,10 +18,10 @@ export function UniversityPartnersContent() {
       partnership: "Host institution, academic support, resource sharing",
     },
     {
-      name: "Bahir Dar University",
-      description: "Partner in environmental initiatives and sustainable development projects across Ethiopia.",
+      name: "New Generation University",
+      description: "Partner in innovative educational approaches and entrepreneurship development programs.",
       logo: <Globe className="h-12 w-12 text-un-blue" />,
-      partnership: "Environmental initiatives, sustainable development projects",
+      partnership: "Educational innovation, entrepreneurship programs",
     },
     {
       name: "Jimma University",
@@ -84,4 +84,3 @@ export function UniversityPartnersContent() {
     </div>
   )
 }
-

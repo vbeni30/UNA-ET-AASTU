@@ -36,4 +36,3 @@ export function InitiativeHero({ title, subtitle, image }: InitiativeHeroProps) 
 }
 
 export default InitiativeHero
-

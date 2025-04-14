@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Globe, Users, Lightbulb, Heart, Scale, Handshake } from "lucide-react"
+import { Globe, Users, Lightbulb, Heart, Shield, Handshake } from "lucide-react"
 
 export function Values() {
   const ref = useRef(null)
@@ -35,8 +35,8 @@ export function Values() {
         "We approach our work with empathy and understanding, recognizing the human dimension of global issues and the importance of caring for others.",
     },
     {
-      icon: <Scale className="h-8 w-8 text-blue-700 dark:text-blue-400" />,
-      title: "Justice",
+      icon: <Shield className="h-8 w-8 text-blue-700 dark:text-blue-400" />,
+      title: "Opportunity",
       description:
         "We advocate for fairness, equality, and human rights, working to address systemic inequities and promote dignity for all.",
     },
@@ -128,4 +128,3 @@ export function Values() {
     </section>
   )
 }
-

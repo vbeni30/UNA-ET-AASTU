@@ -294,4 +294,3 @@ export function Initiatives() {
     </section>
   )
 }
-

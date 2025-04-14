@@ -265,4 +265,3 @@ export function ApproachSection() {
     </section>
   )
 }
-

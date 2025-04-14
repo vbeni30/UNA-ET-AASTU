@@ -105,4 +105,3 @@ export function InitiativeDetails({ description, content, badges, relatedInitiat
     </section>
   )
 }
-

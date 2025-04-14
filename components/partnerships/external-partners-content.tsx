@@ -1,10 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Building, Globe, Briefcase, Heart, Users } from "lucide-react"
+import { Building, Globe, Heart, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export function ExternalPartnersContent() {
-  // Sample external partners data
+  // Updated external partners data - removed Ethiopian Chamber of Commerce
   const externalPartners = [
     {
       name: "United Nations Development Programme (UNDP) Ethiopia",
@@ -21,17 +21,10 @@ export function ExternalPartnersContent() {
       partnership: "Educational policy support, institutional backing",
     },
     {
-      name: "Ethiopian Chamber of Commerce",
-      description:
-        "Connecting us with the business community for internship opportunities and private sector engagement in SDGs.",
-      logo: <Briefcase className="h-12 w-12 text-un-blue" />,
-      partnership: "Internship program, private sector engagement",
-    },
-    {
-      name: "Ethiopian Red Cross Society",
-      description: "Partnering on humanitarian initiatives, disaster preparedness, and community resilience programs.",
+      name: "Mastercard Foundation",
+      description: "Supporting educational initiatives, youth empowerment programs, and digital inclusion projects.",
       logo: <Heart className="h-12 w-12 text-un-blue" />,
-      partnership: "Humanitarian initiatives, community programs",
+      partnership: "Educational funding, youth empowerment, digital inclusion",
     },
     {
       name: "Association of Ethiopian Civil Society Organizations",
@@ -92,4 +85,3 @@ export function ExternalPartnersContent() {
     </div>
   )
 }
-

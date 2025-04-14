@@ -1,7 +1,7 @@
 import { AboutHero } from "@/components/about/about-hero"
 import { Mission } from "@/components/about/mission"
 import { AastuExcellence } from "@/components/about/aastu-excellence"
-import { Leadership } from "@/components/about/leadership"
+import { PresidentStatement } from "@/components/about/president-statement"
 
 export default function AboutPage() {
   return (
@@ -9,8 +9,7 @@ export default function AboutPage() {
       <AboutHero />
       <Mission />
       <AastuExcellence />
-      <Leadership />
+      <PresidentStatement />
     </div>
   )
 }
-

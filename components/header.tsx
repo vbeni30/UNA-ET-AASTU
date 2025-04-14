@@ -79,6 +79,7 @@ export function Header() {
         { name: "Human Rights Seminar", href: "/initiatives/human-rights-seminar" },
         { name: "Internship Forum", href: "/initiatives/internship-forum" },
         { name: "Model UN Conference", href: "/initiatives/model-un" },
+        { name: "MUN", href: "/initiatives/mun" },
       ],
     },
     {
@@ -89,6 +90,7 @@ export function Header() {
         { name: "Active Membership", href: "/membership/active" },
         { name: "Leadership Positions", href: "/membership/leadership" },
         { name: "Member Benefits", href: "/membership/benefits" },
+        { name: "Professional Educators", href: "/membership/professional-educators" },
         { name: "How to Apply", href: "/membership/apply" },
       ],
     },
@@ -174,7 +176,7 @@ export function Header() {
             link.dropdown ? (
               <div key={index} className="relative group">
                 <button
-                  onClick={() => handleDropdownToggle(link.name)}
+                  onClick={() => handleNavigation(link.href)}
                   className={`text-sm font-medium hover:text-un-blue transition-colors relative flex items-center gap-1 ${
                     isActive(link.href) ? "text-un-blue" : ""
                   }`}
@@ -194,13 +196,6 @@ export function Header() {
                   className="absolute left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
                 >
                   <div className="py-2 bg-white dark:bg-gray-800 rounded-md shadow-soft border border-gray-200 dark:border-gray-700">
-                    <button
-                      onClick={() => handleNavigation(link.href)}
-                      className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
-                    >
-                      Overview of {link.name}
-                    </button>
-                    <div className="h-px bg-border my-1"></div>
                     {link.dropdown.map((item, idx) => (
                       <button
                         key={idx}
@@ -278,7 +273,7 @@ export function Header() {
                     {link.dropdown ? (
                       <>
                         <button
-                          onClick={() => handleDropdownToggle(link.name)}
+                          onClick={() => handleNavigation(link.href)}
                           className={`text-lg font-medium hover:text-un-blue transition-colors flex items-center justify-between w-full ${
                             isActive(link.href) ? "text-un-blue" : ""
                           }`}
@@ -286,16 +281,14 @@ export function Header() {
                           <span>{link.name}</span>
                           <ChevronDown
                             className={`h-4 w-4 transition-transform ${activeDropdown === link.name ? "rotate-180" : ""}`}
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              handleDropdownToggle(link.name)
+                            }}
                           />
                         </button>
                         {activeDropdown === link.name && (
                           <div className="pl-4 border-l-2 border-un-blue/20 space-y-2">
-                            <button
-                              onClick={() => handleNavigation(link.href)}
-                              className="text-sm text-muted-foreground hover:text-un-blue transition-colors block py-1 w-full text-left"
-                            >
-                              Overview of {link.name}
-                            </button>
                             {link.dropdown.map((item, idx) => (
                               <button
                                 key={idx}
@@ -336,4 +329,3 @@ export function Header() {
     </motion.header>
   )
 }
-

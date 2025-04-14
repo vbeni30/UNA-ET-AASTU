@@ -51,28 +51,43 @@ export function AastuExcellence() {
             </p>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-blue-900/20 p-6 rounded-xl shadow-sm">
-                <Award className="h-8 w-8 text-un-blue mb-4" />
-                <h3 className="text-lg font-bold mb-2">First ISO Certified</h3>
-                <p className="text-sm text-muted-foreground">First ISO certified university in Ethiopia</p>
+              <div className="relative p-6 rounded-xl shadow-sm overflow-hidden group">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80')] bg-cover bg-center"></div>
+                <div className="absolute inset-0 bg-blue-900/70 backdrop-blur-[2px] group-hover:backdrop-blur-[1px] transition-all duration-300"></div>
+                <div className="relative z-10">
+                  <Award className="h-8 w-8 text-white mb-4" />
+                  <h3 className="text-lg font-bold mb-2 text-white">First ISO Certified</h3>
+                  <p className="text-sm text-blue-100">First ISO certified university in Ethiopia</p>
+                </div>
               </div>
 
-              <div className="bg-white dark:bg-blue-900/20 p-6 rounded-xl shadow-sm">
-                <BookOpen className="h-8 w-8 text-un-blue mb-4" />
-                <h3 className="text-lg font-bold mb-2">9/13 Departments</h3>
-                <p className="text-sm text-muted-foreground">Nine accredited departments leading in their fields</p>
+              <div className="relative p-6 rounded-xl shadow-sm overflow-hidden group">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center"></div>
+                <div className="absolute inset-0 bg-blue-900/70 backdrop-blur-[2px] group-hover:backdrop-blur-[1px] transition-all duration-300"></div>
+                <div className="relative z-10">
+                  <BookOpen className="h-8 w-8 text-white mb-4" />
+                  <h3 className="text-lg font-bold mb-2 text-white">9/13 Departments</h3>
+                  <p className="text-sm text-blue-100">Nine accredited departments leading in their fields</p>
+                </div>
+              </div>
+              <div className="relative p-6 rounded-xl shadow-sm overflow-hidden group">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581093458791-9f3c3900df7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center"></div>
+                <div className="absolute inset-0 bg-blue-900/70 backdrop-blur-[2px] group-hover:backdrop-blur-[1px] transition-all duration-300"></div>
+                <div className="relative z-10">
+                  <Cpu className="h-8 w-8 text-white mb-4" />
+                  <h3 className="text-lg font-bold mb-2 text-white">Research Leader</h3>
+                  <p className="text-sm text-blue-100">Leading in engineering and technological research</p>
+                </div>
               </div>
 
-              <div className="bg-white dark:bg-blue-900/20 p-6 rounded-xl shadow-sm">
-                <Cpu className="h-8 w-8 text-un-blue mb-4" />
-                <h3 className="text-lg font-bold mb-2">Research Leader</h3>
-                <p className="text-sm text-muted-foreground">Leading in engineering and technological research</p>
-              </div>
-
-              <div className="bg-white dark:bg-blue-900/20 p-6 rounded-xl shadow-sm">
-                <GraduationCap className="h-8 w-8 text-un-blue mb-4" />
-                <h3 className="text-lg font-bold mb-2">Global Success</h3>
-                <p className="text-sm text-muted-foreground">Students achieving success in global competitions</p>
+              <div className="relative p-6 rounded-xl shadow-sm overflow-hidden group">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center"></div>
+                <div className="absolute inset-0 bg-blue-900/70 backdrop-blur-[2px] group-hover:backdrop-blur-[1px] transition-all duration-300"></div>
+                <div className="relative z-10">
+                  <GraduationCap className="h-8 w-8 text-white mb-4" />
+                  <h3 className="text-lg font-bold mb-2 text-white">Global Success</h3>
+                  <p className="text-sm text-blue-100">Students achieving success in global competitions</p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -113,4 +128,3 @@ export function AastuExcellence() {
     </section>
   )
 }
-

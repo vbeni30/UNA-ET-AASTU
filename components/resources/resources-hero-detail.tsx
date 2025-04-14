@@ -34,4 +34,3 @@ export function ResourcesHero({ title, subtitle, image }: ResourcesHeroProps) {
     </section>
   )
 }
-
