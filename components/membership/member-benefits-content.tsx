@@ -144,8 +144,6 @@ export function MemberBenefitsContent() {
 
   return (
     <section className="w-full py-20">
-      {/* Removed the fading background div that was causing visibility issues */}
-
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-block rounded-full bg-blue-100 dark:bg-blue-800 px-3 py-1 text-sm font-medium text-blue-800 dark:text-blue-100 mb-4">
@@ -263,7 +261,6 @@ export function MemberBenefitsContent() {
             <p className="text-lg text-blue-100">Become a member today and start enjoying these benefits!</p>
           </div>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            {/* Fixed button styling for better visibility */}
             <Link
               href="/membership/apply"
               className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
