@@ -3,25 +3,17 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Globe, Sun, Moon, ChevronDown } from "lucide-react"
-import { useTheme } from "next-themes"
+import { Menu, Globe, ChevronDown } from "lucide-react"
 import { motion, useReducedMotion } from "framer-motion"
 import { usePathname, useRouter } from "next/navigation"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
   const pathname = usePathname()
   const router = useRouter()
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const prefersReducedMotion = useReducedMotion()
-
-  // Only access theme after component has mounted to avoid hydration mismatch
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,12 +27,6 @@ export function Header() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  const toggleTheme = () => {
-    if (mounted) {
-      setTheme(theme === "dark" ? "light" : "dark")
-    }
-  }
 
   // Custom navigation handler to ensure scroll to top
   const handleNavigation = (href: string) => {
@@ -195,12 +181,12 @@ export function Header() {
                   id={`dropdown-${link.name}`}
                   className="absolute left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
                 >
-                  <div className="py-2 bg-white dark:bg-gray-800 rounded-md shadow-soft border border-gray-200 dark:border-gray-700">
+                  <div className="py-2 bg-white rounded-md shadow-soft border border-gray-200">
                     {link.dropdown.map((item, idx) => (
                       <button
                         key={idx}
                         onClick={() => handleNavigation(item.href)}
-                        className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
+                        className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
                       >
                         {item.name}
                       </button>
@@ -226,11 +212,7 @@ export function Header() {
             ),
           )}
 
-          <div className="flex items-center gap-2 ml-2">
-            <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
-              {mounted && theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </Button>
-
+          <div className="flex items-center ml-2">
             <Button
               variant="default"
               size="sm"
@@ -262,9 +244,6 @@ export function Header() {
                     <span className="text-xs text-muted-foreground leading-tight">AASTU Chapter</span>
                   </div>
                 </div>
-                <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
-                  {mounted && theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-                </Button>
               </div>
 
               <div className="space-y-4">
