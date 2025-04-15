@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,7 +52,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased", outfit.variable)}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           <ScrollToTop />
           <div className="flex min-h-screen flex-col">
             <Header />
@@ -64,8 +64,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-import "./globals.css"
-
-
-import './globals.css'
