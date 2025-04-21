@@ -1,9 +1,10 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Globe, Mail, MapPin, Phone, ArrowRight } from "lucide-react"
+import { Mail, MapPin, Phone, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function Footer() {
@@ -62,9 +63,15 @@ export function Footer() {
             style={{ willChange: "opacity, transform" }}
           >
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 bg-un-blue rounded-full flex items-center justify-center overflow-hidden shadow-glow">
-                <Globe className="h-7 w-7 text-white absolute" />
-                <div className="absolute w-full h-full bg-un-darkblue rounded-full animate-pulse opacity-50"></div>
+              <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden shadow-glow">
+                <Image
+                  src="/UN_emblem_blue.svg"
+                  alt="UN Emblem"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain"
+                />
+                <div className="absolute inset-0 bg-un-darkblue rounded-full animate-pulse opacity-20"></div>
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-xl leading-tight">UNA-ET</span>
