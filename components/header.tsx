@@ -3,10 +3,9 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, ChevronDown } from "lucide-react"
+import { Menu, ChevronDown, Globe } from "lucide-react"
 import { motion, useReducedMotion } from "framer-motion"
 import { usePathname, useRouter } from "next/navigation"
-import Image from "next/image"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -15,6 +14,7 @@ export function Header() {
   const router = useRouter()
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const prefersReducedMotion = useReducedMotion()
+  const [imageError, setImageError] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -133,6 +133,23 @@ export function Header() {
     }
   }
 
+  const renderLogo = () => {
+    if (imageError) {
+      return (
+        <div className="relative w-10 h-10 bg-un-blue rounded-full flex items-center justify-center overflow-hidden shadow-glow">
+          <Globe className="h-6 w-6 text-white absolute" />
+          <div className="absolute w-full h-full bg-un-darkblue rounded-full animate-pulse opacity-50"></div>
+        </div>
+      )
+    }
+
+    return (
+      <div className="relative w-10 h-10 flex items-center justify-center">
+        <img src="/UN_emblem_blue.svg" alt="UN Emblem" className="w-10 h-10" onError={() => setImageError(true)} />
+      </div>
+    )
+  }
+
   return (
     <motion.header
       initial={prefersReducedMotion ? { y: 0 } : { y: -100 }}
@@ -150,16 +167,7 @@ export function Header() {
           className="flex items-center gap-2"
         >
           <button onClick={() => handleNavigation("/")} className="flex items-center gap-2">
-            <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden">
-              <Image
-                src="/UN_emblem_blue.svg"
-                alt="UN Emblem"
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
-                priority
-              />
-            </div>
+            {renderLogo()}
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-tight hidden md:inline-block">UNA-ET</span>
               <span className="text-xs text-muted-foreground leading-tight hidden md:inline-block">AASTU Chapter</span>
@@ -245,15 +253,7 @@ export function Header() {
             <div className="flex flex-col gap-6 mt-8">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
-                  <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/UN_emblem_blue.svg"
-                      alt="UN Emblem"
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
+                  {renderLogo()}
                   <div className="flex flex-col">
                     <span className="font-bold text-lg leading-tight">UNA-ET</span>
                     <span className="text-xs text-muted-foreground leading-tight">AASTU Chapter</span>
