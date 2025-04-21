@@ -7,7 +7,8 @@ export default function UniversityPartnersPage() {
       <PartnershipsHero
         title="University Partners"
         subtitle="Collaborating with academic institutions to advance our mission"
-        image="/placeholder.svg?height=500&width=1200"
+        image="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2071"
+        color="blue"
       />
       <UniversityPartnersContent />
     </div>

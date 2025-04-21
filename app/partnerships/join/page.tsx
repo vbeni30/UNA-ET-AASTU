@@ -7,7 +7,8 @@ export default function BecomePartnerPage() {
       <PartnershipsHero
         title="Become a Partner"
         subtitle="Join us in advancing the UN Sustainable Development Goals"
-        image="/placeholder.svg?height=500&width=1200"
+        image="https://images.unsplash.com/photo-1556484687-30636164638b?q=80&w=2074"
+        color="red"
       />
       <BecomePartnerContent />
     </div>
