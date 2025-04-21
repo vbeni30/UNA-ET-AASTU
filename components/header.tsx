@@ -299,7 +299,7 @@ export function Header() {
                       <button
                         onClick={() => handleNavigation(link.href)}
                         className={`text-lg font-medium hover:text-un-blue transition-colors block w-full text-left ${
-                          isActive(link.href) ? "text-un-blue" : "" 
+                          isActive(link.href) ? "text-un-blue" : ""
                         }`}
                       >
                         {link.name}
