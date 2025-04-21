@@ -50,7 +50,7 @@ export function PresidentStatement() {
               />
             </div>
             <div>
-              <h3 className="text-2xl font-bold">Robera Geleta</h3>
+              <h3 className="text-2xl font-bold">Robera Berhanu</h3>
               <p className="text-purple-700 dark:text-purple-400 font-medium">President, UNA-ET AASTU Chapter</p>
             </div>
           </motion.div>

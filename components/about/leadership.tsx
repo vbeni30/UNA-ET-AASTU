@@ -69,10 +69,10 @@ export function Leadership() {
       icon: <Users className="h-5 w-5 text-blue-500" />,
     },
     {
-      name: "TBA",
+      name: "Robel",
       position: "Education and Training Chair",
       bio: "Leads educational initiatives, training programs, and skill development activities.",
-      image: "/placeholder.svg?height=300&width=300&text=TBA",
+      image: "/placeholder.svg?height=300&width=300&text=Robel",
       icon: <Users className="h-5 w-5 text-blue-500" />,
     },
   ]
