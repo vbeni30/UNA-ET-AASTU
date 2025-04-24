@@ -12,7 +12,7 @@ export function Leadership() {
 
   // Executive Committee
   const president = {
-    name: "Robera berhanu",
+    name: "Robera Berhanu",
     position: "President",
     bio: "Leads the chapter and oversees all operations and strategic initiatives.",
     image: "/placeholder.svg?height=300&width=300&text=Robera",
