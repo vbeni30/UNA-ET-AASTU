@@ -11,12 +11,12 @@ export function Leadership() {
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   // Executive Committee
-  const president = {
-    name: "Robera Berhanu",
-    position: "President",
-    bio: "Leads the chapter and oversees all operations and strategic initiatives.",
-    image: "/robera-berhanu.png?height=300&width=300&text=Robera",
-  }
+ const president = {
+  name: "Robera Berhanu",
+  position: "President",
+  bio: "Leads the chapter and oversees all operations and strategic initiatives.",
+  image: "/robera-berhanu.png", 
+}
 
   const executiveCommittee = [
     {
