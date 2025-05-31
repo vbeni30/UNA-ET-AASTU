@@ -23,7 +23,7 @@ export function Leadership() {
       name: "Hana",
       position: "Vice President of Internal Affairs",
       bio: "Manages internal operations and coordinates between different committees.",
-      image: "/placeholder.svg?height=300&width=300&text=Hana",
+      image: "/robera-berhanu.png?height=300&width=300&text=Hana",
     },
     {
       name: "Nadia",
