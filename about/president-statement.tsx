@@ -42,12 +42,7 @@ export function PresidentStatement() {
             className="flex flex-col items-center text-center space-y-4"
           >
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-purple-200 dark:border-purple-900/50 shadow-lg">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG000.jpg-6ss4m8F8VcZdVOLfWLI04FBFfLjUQS.jpeg"
-                alt="Robera Berhanu"
-                fill
-                className="object-cover"
-              />
+              <Image src="/images/robera-berhanu.png" alt="Robera Berhanu" fill className="object-cover" />
             </div>
             <div>
               <h3 className="text-2xl font-bold">Robera Berhanu</h3>
