@@ -43,7 +43,7 @@ export function PresidentStatement() {
           >
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-purple-200 dark:border-purple-900/50 shadow-lg">
               <Image
-               src="/robera.png" alt="Robera"
+               src="/robera-berhanu.png" alt="Robera"
                 alt="President Robera"
                 fill
                 className="object-cover"
