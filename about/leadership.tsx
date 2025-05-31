@@ -15,7 +15,7 @@ export function Leadership() {
     name: "Robera Berhanu",
     position: "President",
     bio: "Leads the chapter and oversees all operations and strategic initiatives.",
-    image: "/images/robera-berhanu.png",
+    image: "/robera-berhanu.png",
   }
 
   const executiveCommittee = [
