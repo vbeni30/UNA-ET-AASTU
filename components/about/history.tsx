@@ -90,7 +90,7 @@ export function History() {
               <div className="space-y-4">
                 <div className="inline-flex items-center rounded-md bg-un-blue/10 px-3 py-1 text-sm font-medium text-un-blue">
                   <FileText className="mr-1 h-4 w-4" />
-                  2020
+                  2025
                 </div>
                 <h3 className="text-2xl font-bold">MOU (Memorandum of Understanding)</h3>
                 <p className="text-muted-foreground">
@@ -101,8 +101,8 @@ export function History() {
               </div>
               <div className="relative aspect-video overflow-hidden rounded-xl md:aspect-square">
                 <Image
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069"
-                  alt="Signing of the MOU between UNA-ET and AASTU"
+                  src="/IMG_0661.JPG"
+                  alt="MOU signing ceremony between UNA-ET and AASTU representatives"
                   fill
                   className="object-cover"
                 />
