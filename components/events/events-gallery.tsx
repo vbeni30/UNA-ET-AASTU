@@ -13,19 +13,19 @@ export function EventsGallery() {
 
   const galleryImages = [
     {
-      src: "/IMG000.jpg",
+      src: "/images/event-01.jpg",
       alt: "Chapter Launch Workshop",
       event: "Chapter Launch",
       date: "September 2024",
     },
     {
-      src: "/IMG_0661.JPG",
+      src: "/images/event-01.jpg",
       alt: "MOU Signing Ceremony",
       event: "MOU Signing",
       date: "July 2025",
     },
     {
-      src: "/images/robera-berhanu.png",
+      src: "/images/event-01.jpgg",
       alt: "Leadership Team Meeting",
       event: "Leadership Meeting",
       date: "June 2024",
