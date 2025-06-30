@@ -136,7 +136,7 @@ export function EventsGallery() {
       description: "Leadership and advocacy skills development",
       date: "January 2024",
       imageCount: 7,
-      previewImage: "/Advocacy Training/robera-berhanu.png",
+      previewImage: "/Advocacy Training/advocacy-preview.webp",
       images: [
         {
           src: "/Advocacy Training/advocacy-preview.webp",
