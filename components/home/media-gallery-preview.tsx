@@ -4,49 +4,78 @@ import { useRef } from "react"
 import Image from "next/image"
 import { motion, useInView } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Calendar, Users } from "lucide-react"
 import Link from "next/link"
+import { Card, CardContent } from "@/components/ui/card"
+
+interface AlbumPreview {
+  id: string
+  title: string
+  description: string
+  date: string
+  imageCount: number
+  previewImage: string
+  briefDescription: string
+}
 
 export function MediaGalleryPreview() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
-  const galleryImages = [
+  const albumPreviews: AlbumPreview[] = [
     {
-      src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070",
-      alt: "SDG Hackathon participants collaborating",
-      width: 600,
-      height: 400,
+      id: "launch-day",
+      title: "Launch Day",
+      description: "The official launch of UNA-ET AASTU Chapter",
+      briefDescription: "Celebrating the birth of our chapter with distinguished guests and founding members",
+      date: "September 2024",
+      imageCount: 10,
+      previewImage: "/Launch Day/launch-preview.webp",
     },
     {
-      src: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=2070",
-      alt: "Students at Model UN conference",
-      width: 600,
-      height: 400,
+      id: "mou-signing",
+      title: "MOU Signing",
+      description: "Memorandum of Understanding signing ceremony",
+      briefDescription: "Formalizing strategic partnerships to advance our mission and impact",
+      date: "July 2025",
+      imageCount: 5,
+      previewImage: "/Mou/mou-preview.webp",
     },
     {
-      src: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=2069",
-      alt: "Environmental awareness campaign",
-      width: 600,
-      height: 400,
+      id: "earth-day",
+      title: "Earth Day",
+      description: "Environmental awareness and tree planting initiative",
+      briefDescription: "Taking action for our planet through community engagement and environmental stewardship",
+      date: "April 2024",
+      imageCount: 15,
+      previewImage: "/Earth Day/earth-day-preview.webp",
     },
     {
-      src: "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=2070",
-      alt: "Leadership workshop session",
-      width: 600,
-      height: 400,
+      id: "morning-run",
+      title: "Morning Run",
+      description: "Health and wellness community run",
+      briefDescription: "Promoting physical wellness and community bonding through healthy activities",
+      date: "March 2024",
+      imageCount: 8,
+      previewImage: "/Morning Run/run-preview.webp",
     },
     {
-      src: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=2087",
-      alt: "Community outreach program",
-      width: 600,
-      height: 400,
+      id: "blockchain-competition",
+      title: "Blockchain Competition",
+      description: "Innovation and technology hackathon",
+      briefDescription: "Fostering innovation and technological advancement through competitive programming",
+      date: "February 2024",
+      imageCount: 10,
+      previewImage: "/BlockChain/blockchain-preview.webp",
     },
     {
-      src: "https://images.unsplash.com/photo-1559223607-a43c990c692c?q=80&w=2070",
-      alt: "Student networking event",
-      width: 600,
-      height: 400,
+      id: "advocacy-training",
+      title: "Advocacy Training",
+      description: "Leadership and advocacy skills development",
+      briefDescription: "Empowering members with essential leadership and advocacy skills for global impact",
+      date: "January 2024",
+      imageCount: 7,
+      previewImage: "/Advocacy Training/advocacy-preview.webp",
     },
   ]
 
@@ -69,36 +98,65 @@ export function MediaGalleryPreview() {
             Moments & Memories
           </h2>
           <p className="max-w-[800px] text-muted-foreground md:text-xl">
-            A glimpse into our activities, events, and the impact we're making together.
+            Explore our event albums and discover the impactful moments we've shared together as a community.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {galleryImages.map((image, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {albumPreviews.map((album, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
+              key={album.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative aspect-[4/3] rounded-lg overflow-hidden group"
             >
-              <Image
-                src={image.src || "/placeholder.svg"}
-                alt={image.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm font-medium">{image.alt}</p>
-              </div>
+              <Link href="/events/gallery" className="block group">
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={album.previewImage || "/placeholder.svg"}
+                      alt={album.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-all duration-500 group-hover:scale-110"
+                      loading={index < 3 ? "eager" : "lazy"}
+                      priority={index < 2}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                    <div className="absolute top-4 right-4">
+                      <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium text-gray-900 dark:text-white">
+                        {album.imageCount} photos
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-white font-bold text-xl mb-1 group-hover:text-blue-200 transition-colors">
+                        {album.title}
+                      </h3>
+                      <div className="flex items-center text-white/90 text-sm">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        <span>{album.date}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{album.briefDescription}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <Users className="h-3 w-3 mr-1" />
+                        <span>View Album</span>
+                      </div>
+                      <ArrowRight className="h-4 w-4 text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             </motion.div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button asChild className="rounded-full group">
+        <div className="text-center">
+          <Button asChild className="rounded-full group bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
             <Link href="/events/gallery">
               View Full Gallery
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
